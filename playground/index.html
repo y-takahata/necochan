@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ほめぱげ</title>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+</head>
+<body>
+          <div class="contents">
+            {{ message }}
+            <button v-on:click="test_function">test</button>
+            <div v-if="str === '1' ">
+                if分岐できるよ
+            </div>
+          </div>
+        <script>
+          var app = new Vue({
+            el: ".contents",
+            data: {
+               message: "test",
+               str: "2",
+            },
+            methods:{
+               test_function: function(event){
+                  alert( "test" );
+               }
+            },
+          })
+        </script>
+</body>
+</html>
+
